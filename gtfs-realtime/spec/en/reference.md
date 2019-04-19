@@ -309,6 +309,7 @@ The effect of this problem on the affected entity.
 | **UNKNOWN_EFFECT** |
 | **STOP_MOVED** |
 | **NO_EFFECT** |
+| **UNAVAILABLE_ELEVATOR** |
 
 ## _enum_ SeverityLevel
 
