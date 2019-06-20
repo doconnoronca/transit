@@ -152,7 +152,7 @@ Timing information for a single predicted event (either arrival or departure). T
 *   delay should be used when the prediction is given relative to some existing schedule in GTFS.
 *   time should be given whether there is a predicted schedule or not. If both time and delay are specified, time will take precedence (although normally, time, if given for a scheduled trip, should be equal to scheduled time in GTFS + delay).
 
-Uncertainty applies equally to both time and delay. The uncertainty roughly specifies the expected error in true delay (but note, we don't yet define its precise statistical meaning). It's possible for the uncertainty to be 0, for example for trains that are driven under computer timing control.
+Uncertainty applies equally to both time and delay. The uncertainty roughly specifies the expected error in true delay (but note, we don't yet define its precise statistical meaning). It's possible for the uncertainty to be 0, for example for trains that are driven under computer timing control. Uncertainty should not have special values that represent specific behavior, for example if a prediction is precise enough to be shown to the user. 
 
 #### Fields
 
