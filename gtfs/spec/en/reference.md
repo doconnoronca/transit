@@ -36,6 +36,7 @@ This document defines the format and structure of the files that comprise a GTFS
     -   [translations.txt](#translationstxt)
     -   [feed\_info.txt](#feed_infotxt)
     -   [attributions.txt](#attributionstxt)
+    -   [vehicles.txt](#vehiclestxt)
 
 ## Document Conventions
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", “SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
@@ -748,3 +749,16 @@ The file defines the attributions applied to the dataset.
 |  `attribution_url` | URL | Optional | URL of the organization. |
 |  `attribution_email` | Email | Optional | Email of the organization. |
 |  `attribution_phone` | Phone number | Optional | Phone number of the organization. |
+
+### vehicles.txt
+
+File: **Optional**
+
+Primary key (`label`)
+
+This file describes the capacity, accessibility and features of individual vehicles or vehicle ranges.
+
+|  Field Name | Type | Presence | Description |
+|  ------ | ------ | ------ | ------ |
+|  `label` | Text | **Required** | A label that is unique to the vehicle and matches the label shown in the GTFS RealTime label value in the VehicleDescriptor or CarriageDetails. If `high_label` is provided then this value is the low end of the range. |
+|  `high_label` | Text | Optional | If a range of vehicles is represented this is the high end the range. 
