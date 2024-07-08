@@ -760,5 +760,7 @@ This file describes the capacity, accessibility and features of individual vehic
 
 |  Field Name | Type | Presence | Description |
 |  ------ | ------ | ------ | ------ |
-|  `label` | Text | **Required** | A label that is unique to the vehicle and matches the label shown in the GTFS RealTime label value in the VehicleDescriptor or CarriageDetails. If `high_label` is provided then this value is the low end of the range. |
-|  `high_label` | Text | Optional | If a range of vehicles is represented this is the high end the range. 
+|  `label` | Text | **Required** | A label that is unique to the vehicle and matches the label shown in the GTFS RealTime label value in the VehicleDescriptor or CarriageDetails or the vehicle identifier in other real time data sources. If `high_label` is provided then this value is the low end of the range. |
+|  `high_label` | Text | Optional | If a range of vehicles is represented this is the high end the range. There may be non-numeric characters before or after the number that must be consistant for the range. |
+|  `vehicle_class_id` | Text | Recommended | Identifies a class of vehicle that usually run on certain routes. |
+|  `vehicle_type` | Text | Recommended | Should one of the two charactor codes in Vehicle Type column of the Referance Sheet tab on the  A-30 Template from the US Federal Transit Administation at https://www.transit.dot.gov/ntd/30-template |
