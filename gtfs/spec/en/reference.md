@@ -763,10 +763,16 @@ This file describes the capacity, accessibility and features of individual vehic
 |  `label` | Text | **Required** | A label that is unique to the vehicle and matches the label shown in the GTFS RealTime label value in the VehicleDescriptor or CarriageDetails or the vehicle identifier in other real time data sources. If `high_label` is provided then this value is the low end of the range. |
 |  `high_label` | Text | Optional | If a range of vehicles is represented this is the high end the range. There may be non-numeric characters before or after the number that must be consistant for the range. |
 |  `vehicle_class_id` | Text | Recommended | Identifies a class of vehicle that usually run on certain routes. |
+| `depot` | Text | Optional | The name of the facility where the vehicle is normally stored when not in service, such as the bus garage or train yard. |
 |  `vehicle_type` | Text | Recommended | Should one of the two charactor codes in Vehicle Type column on the Referance Sheet tab on the [A-30 Template](https://www.transit.dot.gov/ntd/30-template) from the US Federal Transit Administation or a one or two word description of the type of vehicle |
 | `manufacturer` | Text | Optional | The name of the company that manufactured the vehicle |
 | `model` | Text | Optional | The name of the vehicle model. |
 | `year_manufactured` | Year | Optional | The year the vehicle was manufactured. If a range of vehicles is represented, then the earilest year should be used. |
 | `fuel_type` | Text | Optional | The type of fuel used to provide energy for propulsion. It should be from the list of Fuel Types column on the Referance Sheet tab on the [A-30 Template](https://www.transit.dot.gov/ntd/30-template) from the US Federal Transit Administation. |
 | `length` | Positive float | Optional | The length of the vehcile in meters. |
-| 'articulated_sections` | integer | Optional | The number of articulared sections. If there are no articulations the number should be 1. |
+| `articulated_sections` | integer | Optional | The number of articulared sections. If there are no articulations the number should be 1. |
+| `levels` | integer | Optional | The number of levels available to passengers. Only levels directly above or below other levels count, not where the height of the floor changes within the vehicle. |
+| `seating` | integer | Optional | The number of seats available to passengers, including ones that may become unavailable due to making space for wheelchairs or bikes. |
+| `full_load` | integer | Optional | The number of passengers that is considered a full load for a vehicle. If passenger occupancy is provided, this should be the number of passengers that is considered Full or 100%. |
+| `wheelchair_capacity` | integer | Optional | The number of spots available for passingers with wheelchairs |
+
