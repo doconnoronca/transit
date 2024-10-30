@@ -762,7 +762,7 @@ This file describes the capacity, accessibility and features of individual vehic
 |  ------ | ------ | ------ | ------ |
 |  `label` | Text | **Required** | A label that is unique to the vehicle and matches the label shown in the GTFS RealTime label value in the VehicleDescriptor or CarriageDetails or the vehicle identifier in other real time data sources. If `high_label` is provided then this value is the low end of the range. |
 |  `high_label` | Text | Optional | If a range of vehicles is represented this is the high end the range. There may be non-numeric characters before or after the number that must be consistant for the range. |
-|  `vehicle_class_id` | Text | Recommended | Identifies a class of vehicle that usually run on certain routes. |
+|  `vehicle_class` | ID | Recommended | Identifies a class of vehicle that usually run on certain routes. Ment to link with vehicle_class fields in routes.txt and trips.txt, not to be displayed. When the vehicle_class does not match the class in trips.txt or routes.txt then the consumer should highlight that the vehicle type isn't what is expected and show information about the vehicle that is coming. |
 | `depot` | Text | Optional | The name of the facility where the vehicle is normally stored when not in service, such as the bus garage or train yard. |
 |  `vehicle_type` | Text | Recommended | Should one of the two charactor codes in Vehicle Type column on the Referance Sheet tab on the [A-30 Template](https://www.transit.dot.gov/ntd/30-template) from the US Federal Transit Administation or a one or two word description of the type of vehicle |
 | `manufacturer` | Text | Optional | The name of the company that manufactured the vehicle |
@@ -773,6 +773,9 @@ This file describes the capacity, accessibility and features of individual vehic
 | `articulated_sections` | integer | Optional | The number of articulared sections. If there are no articulations the number should be 1. |
 | `levels` | integer | Optional | The number of levels available to passengers. Only levels directly above or below other levels count, not where the height of the floor changes within the vehicle. |
 | `seating` | integer | Optional | The number of seats available to passengers, including ones that may become unavailable due to making space for wheelchairs or bikes. |
-| `full_load` | integer | Optional | The number of passengers that is considered a full load for a vehicle. If passenger occupancy is provided, this should be the number of passengers that is considered Full or 100%. |
-| `wheelchair_capacity` | integer | Optional | The number of spots available for passingers with wheelchairs |
-
+| `full_load` | integer | Recommended | The number of passengers that is considered a full load for a vehicle. If passenger occupancy is provided, this should be the number of passengers that is considered Full or 100%. |
+| `wheelchairs` | integer | Recommended | The number of spots available for passingers with wheelchairs. |
+| `strollers` | integer | Optional | The number of spots available for strollers. Would include spots used by wheetchairs or strollers. |
+| `bicycles ` | integer | Recommended | The number of bicycles the vehicle can carry, either on the inside or outside of the vehicle. |
+| `bicycle_notes ` | Text | Optional | A decription of the location, procedures and restriction of bringing a bicycle on the vehicle. |
+| `luggage` | Enum | Optional | The vehicle has space set aside for luggage. 
