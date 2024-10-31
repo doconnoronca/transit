@@ -778,4 +778,12 @@ This file describes the capacity, accessibility and features of individual vehic
 | `strollers` | integer | Optional | The number of spots available for strollers. Would include spots used by wheetchairs or strollers. |
 | `bicycles ` | integer | Recommended | The number of bicycles the vehicle can carry, either on the inside or outside of the vehicle. |
 | `bicycle_notes ` | Text | Optional | A decription of the location, procedures and restriction of bringing a bicycle on the vehicle. |
-| `luggage` | Enum | Optional | The vehicle has space set aside for luggage. 
+| `luggage` | Enum | Optional | The vehicle has space set aside for luggage. Valid options are:<br><br>`0` - No space set aside for luggage.<br>`1` - Space above passenger seating for luggage.<br>`2` - Space set aside in the passenger cabin for luggage.<b>`3` - Space for luggage that can be accessed externally. |
+| `luggage_notes` | Text | Optional | A description of how luggage is stored and any limitations that may apply. |
+| `restrooms` | integer | Optional | The number of restrooms in the vehicle. |
+| `air_conditioned` | Enum | Optional | Valid options are:<br><br>`0` - No air conditioning provided.<br>`1` -The vehicle has air conditioning. |
+| `ac_plugs` | integer | Optional | Number of AC power plug that follow the local standard available to passengers. |
+| `usb_plugs` | integer | Optional | Number of USB-A ports for charging devices available to passengers. |
+| `wifi` | Enum | Optional | Valid options are:<br><br>`0` - No WiFi available to passengers.<br>`1` - Internet access through WiFi with no requirements beyond agreeing to the terms of service.<br>`2` - Internet access available through WiFi but requires creating a free account.<br>`3` - Internet access available through WiFi for a fee. |
+| `wifi_notes` | Text | Optional | Description of how the access the Internet through WiFi and any limitation it has. |
+
