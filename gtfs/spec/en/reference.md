@@ -789,8 +789,8 @@ This file describes the capacity, accessibility and features of individual vehic
 | `doors` | integer | Optional | The number of doors on each side. If there are doors on both sides of the vehicle, provide the number of doors per side. |
 | `boarding_type` | Enum | Recommended | Valid options are:<br><br>`1` - High platform level boarding<br>`2` - Low platform level boarding<br>`3` - One or more steps are required to board<b>`4` - Level boarding at some stations |
 | `boarding_steps` | integer | Optional | Number of steps require to board where there is no level boarding. |
-| `accessable_boarding | Enum | Recommended | The accommodation to allow boarding with a mobility device. Valid options are:<br><br>`0` - Not accessable.<br>`1` - Level boarding.<br>`2` - Ramp can be deployed.<br>`3` - Lift can be deployed. |
+| `accessable_boarding` | Enum | Recommended | The accommodation to allow boarding with a mobility device. Valid options are:<br><br>`0` - Not accessable.<br>`1` - Level boarding.<br>`2` - Ramp can be deployed.<br>`3` - Lift can be deployed. |
 | `accessability_notes` | Text | Optional | Information about how to board with a mobility device and any limitations. |
-| `next_stop_announcement | Enum | Recommended | Valid options are:<br><br>`1` - Automatic audio next stop annoucements.<br>`2` - Next stop annoucements by on board staff. |
+| `next_stop_announcement` | Enum | Recommended | Valid options are:<br><br>`1` - Automatic audio next stop annoucements.<br>`2` - Next stop annoucements by on board staff. |
 | `next_stop_display` | Enum | Recommended | Valid options are:<br><br>`1` - Interior displays showing the next stop.<br>`2` - Interior displays showing multiple upcoming stops. |
 | `decoration` | Text | Optional | A brief description of a special wrap or modification of the vehicle that is either seasonal or long term. |
