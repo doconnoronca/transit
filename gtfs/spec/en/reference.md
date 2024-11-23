@@ -774,18 +774,20 @@ This file describes the capacity, accessibility and features of individual vehic
 | `length` | Positive float | Optional | The length of the vehcile in meters. |
 | `articulated_sections` | integer | Optional | The number of articulared sections. If there are no articulations the number should be 1. |
 | `levels` | integer | Optional | The number of levels available to passengers. Only levels directly above or below other levels count, not where the height of the floor changes within the vehicle. |
+| `vehicle_notes` | Text | Optional | Notable aspects about the vehicles that passengers should know about not covered by other fields. |
 | `seating` | integer | Optional | The number of seats available to passengers, including ones that may become unavailable due to making space for wheelchairs or bikes. |
 | `full_load` | integer | Recommended | The number of passengers that is considered a full load for a vehicle. If passenger occupancy is provided, this should be the number of passengers that is considered Full or 100%. |
 | `wheelchairs` | integer | Recommended | The number of spots available for passingers with wheelchairs. |
-| `strollers` | integer | Optional | The number of spots available for strollers. Would include spots used by wheetchairs or strollers. |
+| `strollers` | integer | Optional | The number of spots available for strollers. Would include spots used by wheelchairs or strollers. |
 | `bicycles ` | integer | Recommended | The number of bicycles the vehicle can carry, either on the inside or outside of the vehicle. |
-| `bicycle_notes ` | Text | Optional | A decription of the location, procedures and restriction of bringing a bicycle on the vehicle. |
+| `bicycle_notes` | Text | Optional | A decription of the location, procedures and restriction of bringing a bicycle on the vehicle. |
 | `luggage` | Enum | Optional | The vehicle has space set aside for luggage. Valid options are:<br><br>`0` - No space set aside for luggage.<br>`1` - Space above passenger seating for luggage.<br>`2` - Space set aside in the passenger cabin for luggage.<br>`3` - Space for luggage that can be accessed externally. |
 | `luggage_notes` | Text | Optional | A description of how luggage is stored and any limitations that may apply. |
 | `restrooms` | integer | Optional | The number of restrooms in the vehicle. |
-| `air_conditioned` | Enum | Optional | Valid options are:<br><br>`0` - No air conditioning provided.<br>`1` -The vehicle has air conditioning. |
-| `ac_plugs` | integer | Optional | Number of AC power plug that follow the local standard available to passengers. |
-| `usb_plugs` | integer | Optional | Number of USB-A ports for charging devices available to passengers. |
+| `air_conditioned` | Enum | Optional | Valid options are:<br><br>`0` - No air conditioning provided.<br>`1` - The vehicle has air conditioning. |
+| `ac_plugs` | integer | Optional | AC power plugs that follow the local standard that are available to passengers.<br><br>Empty - No information on availability.<br>`0` - No AC power plugs available.<br>`1` - An unknown number of AC power plugs available.<br>Other number - the number of AC power plugs available to passengers. |
+| `usba_plugs` | integer | Optional | USB-A ports for charging devices available to passengers.<br><br>Empty - No information on availability.<br>`0` - No USB-A ports available.<br>`1` - An unknown number of USB-A ports available.<br>Other number - the number of USB-A ports available to passengers. |
+| `usbc_plugs` | integer | Optional | USB-C ports for charging devices available to passengers.<br><br>Empty - No information on availability.<br>`0` - No USB-C ports available.<br>`1` - An unknown number of USB-C ports available.<br>Other number - the number of USB-C ports available to passengers. |
 | `wifi` | Enum | Optional | Valid options are:<br><br>`0` - No WiFi available to passengers.<br>`1` - Internet access through WiFi with no requirements beyond agreeing to the terms of service.<br>`2` - Internet access available through WiFi but requires creating a free account.<br>`3` - Internet access available through WiFi for a fee. |
 | `wifi_notes` | Text | Optional | Description of how the access the Internet through WiFi and any limitations it has. |
 | `doors` | integer | Optional | The number of doors on each side. If there are doors on both sides of the vehicle, provide the number of doors per side. |
@@ -793,6 +795,6 @@ This file describes the capacity, accessibility and features of individual vehic
 | `boarding_steps` | integer | Optional | Number of steps require to board where there is no level boarding. |
 | `accessable_boarding` | Enum | Recommended | The accommodation to allow boarding with a mobility device. Valid options are:<br><br>`0` - Not accessable.<br>`1` - Level boarding.<br>`2` - Ramp can be deployed.<br>`3` - Lift can be deployed. |
 | `accessability_notes` | Text | Optional | Information about how to board with a mobility device and any limitations. |
-| `next_stop_announcement` | Enum | Recommended | Valid options are:<br><br>`1` - Automatic audio next stop annoucements.<br>`2` - Next stop annoucements by on board staff. |
-| `next_stop_display` | Enum | Recommended | Valid options are:<br><br>`1` - Interior displays showing the next stop.<br>`2` - Interior displays showing multiple upcoming stops. |
+| `next_stop_announcement` | Enum | Recommended | Audible next stop announcemnts. Valid options are:<br><br>`0` - No next stop announcement available.<br>`1` - Automatic audio next stop annoucements.<br>`2` - Next stop annoucements by on board staff.<br>`3` - Next stop annoucements on request of on board staff. |
+| `next_stop_display` | Enum | Recommended | Visual next stop displays. Valid options are:<br><br>`0` - No next stop display.<br>`1` - Interior displays showing the next stop.<br>`2` - Interior displays showing multiple upcoming stops. |
 | `decoration` | Text | Optional | A brief description of a special wrap or modification of the vehicle that is either seasonal or long term. |
