@@ -774,6 +774,7 @@ This file describes the capacity, accessibility and features of individual vehic
 |  `length` | Positive float | Optional | The length of the vehicle in meters. |
 |  `articulated_sections` | integer | Optional | The number of articulated sections. If there are no articulations the number should be 1. |
 |  `levels` | integer | Optional | The number of levels available to passengers. Only levels directly above or below other levels count, not where the height of the floor changes within the vehicle. |
+|  `image_url` | URL | Optional | Fully qualified URL of an image of the vehicle. The image should have as aspect ratio between 1:1 and 2:1 and a have a vertical resolution of at least 500. Consumers should only download this image one time for each GTFS update and always serve it to end users themselves. End users should never be automatically downloading directly from the URL provided.
 |  `vehicle_notes` | Text | Optional | Notable aspects about the vehicles that passengers should know about not covered by other fields. |
 |  `seating` | integer | Optional | The number of seats available to passengers, including ones that may become unavailable due to making space for wheelchairs or bikes. |
 |  `full_load` | integer | Recommended | The number of passengers that is considered a full load for a vehicle. If passenger occupancy is provided, this should be the number of passengers that is considered Full or 100%. |
