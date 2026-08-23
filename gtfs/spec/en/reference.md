@@ -950,7 +950,7 @@ This file describes the capacity, accessibility and features of individual vehic
 |  `capacity_strollers` | integer | Optional | The number of spots available for strollers. Would include spots used by wheelchairs or strollers. |
 |  `capacity_bikes` | integer | Recommended | The number of bicycles the vehicle can carry, either on the inside or outside of the vehicle. |
 |  `bike_notes` | Text | Optional | A decription of the location, procedures and restriction of bringing a bicycle on the vehicle. |
-|  `capacity_cars` | integer | Optional | The number of standard size cars the vehicle can carry. Primarily for farries. |
+|  `capacity_cars` | integer | Optional | The number of standard size cars the vehicle can carry. Primarily for ferries. |
 |  `luggage` | Enum | Optional | The vehicle has space set aside for luggage. Valid options are:<br><br>`0` - No space set aside for luggage.<br>`1` - Space above passenger seating for luggage.<br>`2` - Space set aside in the passenger cabin for luggage.<br>`3` - Space for luggage that can be accessed externally. |
 |  `luggage_notes` | Text | Optional | A description of how luggage is stored and any limitations that may apply. |
 |  `restrooms` | integer | Optional | The number of restrooms in the vehicle, including any accessible restrooms. |
